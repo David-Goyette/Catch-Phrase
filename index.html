@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>catch-phrase-live</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="catch-phrase.css" rel="stylesheet">
+</head>
+<body>
+    <div id="left">
+        <div id="left-header">
+            <div id="game-title">🐒Catch Phrase</div>
+            <div id="room-name" style="display: none"></div>
+            <div id="score-board" style="display: none">
+                <div class="greenTeam">0</div>
+                <div class="redTeam">0</div>
+            </div>
+        </div>
+        <div id="main-video-wrapper" style="display: none">
+            <video id="main-video" autoplay muted></video>
+            <i class='bx bx-hourglass bx-md'></i>
+        </div>
+        <div id="start-box" class="box">
+            <div class="input-container">
+                <label>Player name</label>
+                <input id="player-input">
+            </div>
+            <div class="input-container">
+                <label>Room name</label>
+                <input id="room-input">
+            </div>
+            <div class="button-container">
+                <button id="join-button" class="button-style-1">Join</button>
+                <button id="create-button" class="button-style-2">Create</button>
+            </div>
+            <div style="display: none;" id="invalid-alert">This room does not exist.</div>
+        </div>
+        <div id="setup-box" class="box" style="display: none">
+            <div class="input-container">
+                <label>Categories</label>
+                <input id="categories-input" placeholder="one word categories">
+            </div>
+            <button id="generate-button" class="button-style-1">✦Generate</button>
+            <div class="input-container">
+                <label>Select teams</label>
+                <div id="player-button-grid"></div>
+            </div>
+            <button id="start-button" class="button-style-2" disabled>Start game</button>
+        </div>
+        <div id="idle-box" class="box" style="display: none">
+            <div class="message"></div>
+        </div>
+        <div id="go-box" class="box" style="display: none">
+            <div class="message"></div>
+            <button id="go-button" class="button-style-2">Go</button>
+        </div>
+        <div id="turn-box" class="box" style="display: none">
+            <div class="message"></div>
+            <div class="button-container">
+                <button id="skip-button" class="button-style-1">Skip</button>
+                <button id="next-button" class="button-style-2">Next</button>
+            </div>
+        </div>
+        <div id="end-box" class="box" style="display: none">
+            <div class="message"></div>
+            <div class="button-container">
+                <button id="leave-button" class="button-style-1">Leave</button>
+                <button id="setup-button" class="button-style-2">Setup new game</button>
+            </div>
+        </div>
+    </div>
+    <div id="right">
+        <div id="video-grid"></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+    <script type="module" src="catch-phrase.js"></script>
+</body>
+</html>
