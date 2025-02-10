@@ -2,12 +2,12 @@ import {initializeApp} from 'https://www.gstatic.com/firebasejs/9.19.1/firebase-
 import {getFirestore, doc, collection, getDoc, getDocs, setDoc, onSnapshot} from 'https://www.gstatic.com/firebasejs/9.19.1/firebase-firestore.js';
 
 const firebaseConfig = {
-    apiKey: "AIzaSyAMrgoQECJcnYBZG8dfEnBZeWTZlBIBcGk",
-    authDomain: "catch-phrase-live.firebaseapp.com",
-    projectId: "catch-phrase-live",
-    storageBucket: "catch-phrase-live.firebasestorage.app",
-    messagingSenderId: "701003910296",
-    appId: "1:701003910296:web:43ce981f6e8fad7b2214ed"
+    apiKey: "",
+    authDomain: "",
+    projectId: "",
+    storageBucket: "",
+    messagingSenderId: "",
+    appId: ""
 };
 
 const app = initializeApp(firebaseConfig);
@@ -273,7 +273,7 @@ async function getCategories(){
 
 async function generateList(categories){
     let prompt = `Generate a list of 200 sayings and idioms (1-4 words long each). Make the idioms/sayings interesting but well known and relating to these categories: ${categories}. Please shuffle the items in the list and use lowercase letters and apostrophes when needed. It is crucial that you return only the list in this exact format: phrase|phrase|phrase.`;
-    let apiKey = 'AIzaSyAWDZzjl8AGL9ZVjX_2FPg7zTssu5vBPrE';
+    let apiKey = '__YOUR_API_KEY__';
     let options = {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
