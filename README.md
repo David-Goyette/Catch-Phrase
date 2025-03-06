@@ -1,8 +1,7 @@
 # Catch Phrase
 
-Guess The Phrase Video Chat Room Web Application
+Catch Phrase is a web application that allows users to connect wiht eachother in a video chat room and play a phrase guessing game. Catch Phrase is completely serverless utilizing Firestore and webRTC.
 
-Currently hosted at https://catch-phrase-live.web.app/
 
 
 
